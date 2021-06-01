@@ -3,8 +3,10 @@ import './rook.css';
 import light from './rook.png';
 import dark from './rookb.png';
 
-function Rook(player) {
-    if (player === "second") {
+function Rook() {
+    let random = Math.floor(Math.random() * 10);
+
+    if (random >= 4) {
         return (
             <div className="p-rook">
                 <img src={dark} className="rook-dark" alt="rook" />

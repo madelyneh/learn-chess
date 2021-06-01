@@ -3,8 +3,10 @@ import './biship.css';
 import light from './biship.png';
 import dark from './bishipb.png';
 
-function Biship(player) {
-    if (player === "second") {
+function Biship() {
+    let random = Math.floor(Math.random() * 10);
+
+    if (random >= 4) {
         return (
             <div className="p-biship">
                 <img src={dark} className="biship-dark" alt="biship" />

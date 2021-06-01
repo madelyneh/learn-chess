@@ -3,8 +3,10 @@ import './knight.css';
 import light from './knight.png';
 import dark from './knightb.png';
 
-function Knight(player) {
-    if (player === "second") {
+function Knight() {
+    let random = Math.floor(Math.random() * 10);
+
+    if (random >= 4) {
         return (
             <div className="p-knight">
                 <img src={dark} className="knight-dark" alt="knight" />
