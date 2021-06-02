@@ -2,20 +2,26 @@ import React from 'react';
 import './biship.css';
 import light from './biship.png';
 import dark from './bishipb.png';
+import {onClick} from '../../Game/click';
 
-function Biship() {
-    let random = Math.floor(Math.random() * 10);
+const Biship = (props: any) => {
 
-    if (random >= 4) {
+    if (props.currentPlayer === "second") {
         return (
-            <div className="p-biship">
-                <img src={dark} className="biship-dark" alt="biship" />
+            <div className="piece">
+                <img onClick={(event) => onClick(event)} 
+                    src={dark} 
+                    className="biship" 
+                    alt="biship" />
             </div>
         );
     } else {
         return (
-            <div className="p-biship">
-                <img src={light} className="biship-light" alt="biship" />
+            <div className="piece">
+                <img onClick={(event) => onClick(event)}
+                    src={light} 
+                    className="biship" 
+                    alt="biship" />
 
             </div>
         );

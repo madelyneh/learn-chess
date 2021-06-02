@@ -2,21 +2,26 @@ import React from 'react';
 import './rook.css';
 import light from './rook.png';
 import dark from './rookb.png';
+import {onClick} from '../../Game/click';
 
-function Rook() {
-    let random = Math.floor(Math.random() * 10);
+const Rook = (props: any) => {
 
-    if (random >= 4) {
+    if (props.currentPlayer === "second") {
         return (
-            <div className="p-rook">
-                <img src={dark} className="rook-dark" alt="rook" />
+            <div className="piece">
+                <img onClick={(event) => onClick(event)} 
+                    src={dark} 
+                    className="rook" 
+                    alt="rook" />
             </div>
         );
     } else {
         return (
-            <div className="p-rook">
-                <img src={light} className="rook-light" alt="rook" />
-
+            <div className="piece">
+                <img onClick={(event) => onClick(event)} 
+                    src={light} 
+                    className="rook"
+                    alt="rook" />
             </div>
         );
     }

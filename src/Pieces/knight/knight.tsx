@@ -2,21 +2,26 @@ import React from 'react';
 import './knight.css';
 import light from './knight.png';
 import dark from './knightb.png';
+import {onClick} from '../../Game/click';
 
-function Knight() {
-    let random = Math.floor(Math.random() * 10);
+const Knight = (props: any) => {
 
-    if (random >= 4) {
+    if (props.currentPlayer === "second") {
         return (
-            <div className="p-knight">
-                <img src={dark} className="knight-dark" alt="knight" />
+            <div className="piece">
+                <img onClick={(event) => onClick(event)} 
+                    src={dark} 
+                    className="knight" 
+                    alt="knight" />
             </div>
         );
     } else {
         return (
-            <div className="p-knight">
-                <img src={light} className="knight-light" alt="knight" />
-
+            <div className="piece">
+                <img onClick={(event) => onClick(event)} 
+                    src={light} 
+                    className="knight" 
+                    alt="knight" />
             </div>
         );
     }

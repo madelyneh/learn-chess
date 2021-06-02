@@ -2,20 +2,26 @@ import React from 'react';
 import './king.css';
 import light from './king.png';
 import dark from './kingb.png';
+import {onClick} from '../../Game/click';
 
-function King() {
-    let random = Math.floor(Math.random() * 10);
+const King = (props: any) => {
 
-    if (random >= 4) {
+    if (props.currentPlayer === "second") {
         return (
-            <div className="p-king">
-                <img src={dark} className="king-dark" alt="king" />
+            <div className="piece">
+                <img onClick={(event) => onClick(event)}
+                    src={dark} 
+                    className="king" 
+                    alt="king" />
             </div>
         );
     } else {
         return (
-            <div className="p-king">
-                <img src={light} className="king-light" alt="king" />
+            <div className="piece">
+                <img onClick={(event) => onClick(event)} 
+                    src={light} 
+                    className="king" 
+                    alt="king" />
 
             </div>
         );

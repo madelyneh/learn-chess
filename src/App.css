@@ -1,6 +1,15 @@
-/* .App {
-  text-align: center;
-} */
+.App {
+  /* text-align: center; */
+  /* background-color: red; */
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-image: url(./background.jpg);
+  /* background-repeat: no-repeat; */
+  /* background-attachment: fixed; */
+  /* background-position: center; */
+  background-size: cover;
+}
 
 /* @media (prefers-reduced-motion: no-preference) {
   .App-logo {

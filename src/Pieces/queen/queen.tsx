@@ -2,21 +2,27 @@ import React from 'react';
 import './queen.css';
 import light from './queen.png';
 import dark from './queenb.png';
+import {onClick} from '../../Game/click';
 
-function Queen() {
-    let random = Math.floor(Math.random() * 10);
 
-    if (random >= 4) {
+const Queen = (props: any) => {
+
+    if (props.currentPlayer === "second") {
         return (
-            <div className="p-queen">
-                <img src={dark} className="queen-dark" alt="queen" />
+            <div className="piece">
+                <img onClick={(event) => onClick(event)} 
+                    src={dark} 
+                    className="queen" 
+                    alt="queen" />
             </div>
         );
     } else {
         return (
-            <div className="p-queen">
-                <img src={light} className="queen-light" alt="queen" />
-
+            <div className="piece">
+                <img onClick={(event) => onClick(event)} 
+                    src={light} 
+                    className="queen" 
+                    alt="queen" />
             </div>
         );
     }
