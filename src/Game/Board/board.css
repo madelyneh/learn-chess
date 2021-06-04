@@ -45,6 +45,11 @@
     /* text-align: left; */
     /* cursor: pointer; */
 }
+
+.square:hover {
+    background-color: rgb(161, 255, 218);
+}
+
 .dark {
     background: rgba(0, 0, 0, 0.6);
 }
@@ -57,11 +62,11 @@
     /* font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
 }
 
-.column {
+.row {
     float: left;
 }
 
-.row {
+.column {
     /* padding-right: 1vmin; */
     padding-top: 8vmin;
     float: right;

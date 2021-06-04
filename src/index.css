@@ -16,6 +16,7 @@ code {
   height: 10vmin;
   width: 10vmin;
   display: flex;
+  pointer-events: none;
   /* border: 1px solid red; */
   /* background-color: red; */
   /* overflow: hidden; */
@@ -24,7 +25,12 @@ code {
 img {
   /* border: 1px solid blue; */
   /* background-color: aqua; */
-  cursor: pointer;
+  pointer-events: none;
+  /* cursor: pointer; */
   padding: 0px!important;
   margin: 0px!important;
+}
+
+img:hover {
+  border: .1rem solid rgb(39, 255, 71);
 }

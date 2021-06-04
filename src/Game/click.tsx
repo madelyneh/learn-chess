@@ -1,3 +1,4 @@
 export const onClick = (event: any) => {
-    console.log("CLICKED", event);
+    // console.log("CLICKED", event);
+    
 }

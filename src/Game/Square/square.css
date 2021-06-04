@@ -1,0 +1,42 @@
+.square {
+    float: left;
+    font-weight: bold;
+    height: 10vmin;
+    width: 10vmin;
+    padding: 0px;
+    cursor: pointer;
+}
+
+.square:hover {
+    background-color: rgb(161, 255, 218);
+}
+
+.dark {
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.square-text {
+    position:fixed;
+    color:rgba(138, 138, 138, 0.626);
+    font-size: 14px;
+    text-shadow: 1px 1px 0.5px rgba(0, 0, 0, 0.599); /*, 0 0 1em rgb(255, 255, 255), 0 0 0.2em rgb(255, 255, 255);*/
+    /* font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+}
+
+.row {
+    float: left;
+}
+
+.column {
+    /* padding-right: 1vmin; */
+    padding-top: 8vmin;
+    float: right;
+}
+
+.square:focus {
+    outline: none;
+}
+
+.kbd-navigation .square:focus {
+    background: #ddd;
+}
